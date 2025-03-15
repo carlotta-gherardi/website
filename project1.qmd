@@ -3,11 +3,14 @@ title: "ICU Length of Stay via NLP"
 ---
 
 In this project, we used the MIMIC‑III dataset of medical records, focusing on clinician discharge summaries as the main text source. After cleaning and preprocessing the textual data, we tried three primary text‑processing methods:
--BioBERT: A biomedical variant of the BERT language model, pre‑trained on large corpuses of medical literature.
--TF‑IDF: A frequency-based representation capturing how important specific words are across all documents in the corpus.
--TextBlob: A sentiment analysis approach used experimentally to gauge how sentiment might relate to patient acuity.
 
-Once we derived textual embeddings (or sentiment scores) for each patient’s record, we trained several regression models—including Random Forest, Gradient Boosting, Lasso Regression, and Neural Networks—to predict ICU LOS as a continuous outcome. Surprisingly, relatively simple TF‑IDF features fed into a Random Forest model outperformed more advanced embeddings like BioBERT on this task, achieving higher R^2 and lower RMSE. While BioBERT can capture domain‑specific language nuances, the TF‑IDF approach ended up better preserving clinically relevant signals in the discharge summaries. The final model explained roughly half of the variance in ICU LOS using just the text, suggesting that clinician notes carry significant predictive power. In terms of future directions, we looked at incorporating admission notes (instead of discharge summaries) for more real‑time predictions and combining simple at‑home vitals to enhance triage decision‑making. 
+-   BioBERT: A biomedical variant of the BERT language model, pre‑trained on large corpuses of medical literature.
+
+-   TF‑IDF: A frequency-based representation capturing how important specific words are across all documents in the corpus.
+
+-   TextBlob: A sentiment analysis approach used experimentally to gauge how sentiment might relate to patient acuity.
+
+Once we derived textual embeddings (or sentiment scores) for each patient’s record, we trained several regression models—including Random Forest, Gradient Boosting, Lasso Regression, and Neural Networks—to predict ICU LOS as a continuous outcome. Surprisingly, relatively simple TF‑IDF features fed into a Random Forest model outperformed more advanced embeddings like BioBERT on this task, achieving higher R\^2 and lower RMSE. While BioBERT can capture domain‑specific language nuances, the TF‑IDF approach ended up better preserving clinically relevant signals in the discharge summaries. The final model explained roughly half of the variance in ICU LOS using just the text, suggesting that clinician notes carry significant predictive power. In terms of future directions, we looked at incorporating admission notes (instead of discharge summaries) for more real‑time predictions and combining simple at‑home vitals to enhance triage decision‑making.
 
 For more details, check out our report:
 

@@ -139,7 +139,13 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Using a dataset of Spotify songs—each with attributes such as danceability, energy, loudness, tempo, acousticness, and more—I aimed to see how these musical features relate to a track’s popularity score (on a scale of 0–100). I removed duplicate entries (e.g., the same track re‑released in multiple albums), focused on recent data (December 2019 onward), and created a “top_artist” binary variable indicating whether a song’s artist belonged to the upper decile of average popularity.</p>
-<p>I then employed multiple linear regression, carefully checking assumptions via diagnostic plots (for normality, homoscedasticity, and outliers). After transformations to reduce skew and removing extreme outliers, I used an all‑subsets selection approach guided by the Bayesian Information Criterion. The final model included seven predictors—among them were loudness, energy, duration, top_artist, and genre. Results showed that: - Songs by top artists had substantially higher predicted popularity. - Loudness positively correlated with popularity. - Energy and duration exhibited subtler effects (with more energetic or longer tracks actually showing slightly negative relationships). - Certain genres, particularly rap, also scored higher on popularity compared to others.</p>
+<p>I then employed multiple linear regression, carefully checking assumptions via diagnostic plots (for normality, homoscedasticity, and outliers). After transformations to reduce skew and removing extreme outliers, I used an all‑subsets selection approach guided by the Bayesian Information Criterion. The final model included seven predictors—among them were loudness, energy, duration, top_artist, and genre. Results showed that:</p>
+<ul>
+<li><p>Songs by top artists had substantially higher predicted popularity.</p></li>
+<li><p>Loudness positively correlated with popularity.</p></li>
+<li><p>Energy and duration exhibited subtler effects (with more energetic or longer tracks actually showing slightly negative relationships).</p></li>
+<li><p>Certain genres, particularly rap, also scored higher on popularity compared to others.</p></li>
+</ul>
 <p>With an adjusted R^2 around 0.50, the model explained about half of the variation in popularity, highlighting that while audio features matter, factors like artist fame play an outsize role. Future enhancements could include more granular grouping of genres or additional metadata, but this project underscored the interplay between musical traits and artist name recognition in determining a track’s streaming popularity.</p>
 <p>For more details, check out my report:</p>
 <p><a href="downloads/STATS 101A Project.pdf" class="btn btn-success" target="_blank">Download Full Report PDF</a></p>
