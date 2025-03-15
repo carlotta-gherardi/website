@@ -1,17 +1,38 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "project3.html",
+    "href": "project3.html",
+    "title": "Song Popularity Regression",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Using a dataset of Spotify songs—each with attributes such as danceability, energy, loudness, tempo, acousticness, and more—I aimed to see how these musical features relate to a track’s popularity score (on a scale of 0–100). I removed duplicate entries (e.g., the same track re‑released in multiple albums), focused on recent data (December 2019 onward), and created a “top_artist” binary variable indicating whether a song’s artist belonged to the upper decile of average popularity.\nI then employed multiple linear regression, carefully checking assumptions via diagnostic plots (for normality, homoscedasticity, and outliers). After transformations to reduce skew and removing extreme outliers, I used an all‑subsets selection approach guided by the Bayesian Information Criterion. The final model included seven predictors—among them were loudness, energy, duration, top_artist, and genre. Results showed that: - Songs by top artists had substantially higher predicted popularity. - Loudness positively correlated with popularity. - Energy and duration exhibited subtler effects (with more energetic or longer tracks actually showing slightly negative relationships). - Certain genres, particularly rap, also scored higher on popularity compared to others.\nWith an adjusted R^2 around 0.50, the model explained about half of the variation in popularity, highlighting that while audio features matter, factors like artist fame play an outsize role. Future enhancements could include more granular grouping of genres or additional metadata, but this project underscored the interplay between musical traits and artist name recognition in determining a track’s streaming popularity.\nFor more details, check out my report:\nDownload Full Report PDF"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
+    "objectID": "project2.html",
+    "href": "project2.html",
+    "title": "NBA Classification",
     "section": "",
-    "text": "Hello! My name is Carlotta, and I’m a senior at the University of California, Los Angeles (UCLA), graduating in June 2025 with a Bachelor of Science in Statistics and Data Science and a Minor in Bioinformatics (Engineering). Over the past few years, I’ve been fortunate to explore diverse facets of data-driven problem-solving. I interned at Tesla as an Analytics Engineer, where I built and automated an anomaly detection model. I also gained experience at two startups—one as a Data Science Intern, creating a chatbot to streamline RFP submissions for the sales team, and another as a Data Analytics Intern, improving their system for assessing employee engagement.​\nAt UCLA, I’ve been deeply involved in UConsulting, a management consulting organization, both as an undergraduate consultant and as the leader of the Data Science Committee. During my time there, I worked with clients including UNIQLO, streamlined the organization’s recruitment process, and organized multiple initiatives to boost technical proficiency for both our members and the broader UCLA community. Additionally, I’ve served as a research assistant in the Matteo Pellegrini Lab, focusing on computational biology projects.​\n​What draws me to data science is its impactful power: data can drive strategic decisions, help create innovative products and services, solve pressing challenges and more. I find the constant evolution of the field exciting, and I love how every project is like a new puzzle—equally demanding and rewarding. As I look to the future, I’m eager to join a fast-paced, innovative environment which will challenge me, enabling me to grow, while making a meaningful impact as a Data Scientist.\nA fun fact is that I am Italian-American, and I was born and raised in Bologna, Italy until I moved to LA for college. I am fluent in Italian, English, and Spanish. My favorite things to do in my free time include horse back riding, running, reading fantasy romance novels, watching sitcoms, and having creative outlets like paint-by-numbers. Check out some pics below!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBologna, Italy\nOne of my show jumping events!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy favorite sitcoms\nA Wall-E themed candle I made for a friend"
+    "text": "My group and I used data on NBA games from the 2023–2024 season, with each row containing team performance metrics (e.g., field goal percentage, rebounds, turnovers). After cleaning the data (filling missing values, encoding wins/losses as binary, separating home vs. away games), we generated new features that captured teams’ recent momentum. Specifically, we introduced weighted averages (using exponential decay) for each team’s performance metrics so that more recent games receive higher weight, reflecting current form.\nWe then computed the difference between the home team’s weighted metrics (based on its past home games) and the away team’s weighted metrics (based on its past away games). Models tested included Logistic Regression, Quadratic Discriminant Analysis, Support Vector Machine, and Random Forest. Logistic Regression ultimately provided the highest testing accuracy (about 72%)—a notable improvement over simpler unweighted baselines. Interestingly, incorporating more advanced engineered features, such as detailed head‑to‑head histories or team “stability” measures, did not increase predictive power and often led to overfitting or redundant information. Overall, these results indicate that capturing recent team trends and home‑court advantage was most crucial for predicting game outcomes, while adding too many extra features risked complexity without boosting accuracy.\nFor more details, check out our report:\nDownload Full Report PDF"
+  },
+  {
+    "objectID": "project1.html",
+    "href": "project1.html",
+    "title": "ICU Length of Stay via NLP",
+    "section": "",
+    "text": "In this project, we used the MIMIC‑III dataset of medical records, focusing on clinician discharge summaries as the main text source. After cleaning and preprocessing the textual data, we tried three primary text‑processing methods: -BioBERT: A biomedical variant of the BERT language model, pre‑trained on large corpuses of medical literature. -TF‑IDF: A frequency-based representation capturing how important specific words are across all documents in the corpus. -TextBlob: A sentiment analysis approach used experimentally to gauge how sentiment might relate to patient acuity.\nOnce we derived textual embeddings (or sentiment scores) for each patient’s record, we trained several regression models—including Random Forest, Gradient Boosting, Lasso Regression, and Neural Networks—to predict ICU LOS as a continuous outcome. Surprisingly, relatively simple TF‑IDF features fed into a Random Forest model outperformed more advanced embeddings like BioBERT on this task, achieving higher R^2 and lower RMSE. While BioBERT can capture domain‑specific language nuances, the TF‑IDF approach ended up better preserving clinically relevant signals in the discharge summaries. The final model explained roughly half of the variance in ICU LOS using just the text, suggesting that clinician notes carry significant predictive power. In terms of future directions, we looked at incorporating admission notes (instead of discharge summaries) for more real‑time predictions and combining simple at‑home vitals to enhance triage decision‑making.\nFor more details, check out our report:\nDownload Full Report PDF"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Phone: 424-535-8137\n\nEmail: cgherardi@g.ucla.edu\nLinkedIn: LinkedIn Profile\nGitHub: GitHub Profile"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download PDF Version"
   },
   {
     "objectID": "projects.html",
@@ -42,38 +63,10 @@
     "text": "Song Popularity Regression\nClick here to learn more!\nI analyzed Spotify data to determine which musical characteristics best predict a song’s popularity. By building a multiple linear regression model on features like energy, loudness, duration, top‑artist status, and genre, I captured about half of the variance in track popularity. Notably, being a top artist and having a relatively loud track were among the most influential factors in boosting popularity scores."
   },
   {
-    "objectID": "resume.html",
-    "href": "resume.html",
-    "title": "Resume",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
     "section": "",
-    "text": "Download PDF Version"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "Phone: 424-535-8137\n\nEmail: cgherardi@g.ucla.edu\nLinkedIn: LinkedIn Profile\nGitHub: GitHub Profile"
-  },
-  {
-    "objectID": "project1.html",
-    "href": "project1.html",
-    "title": "ICU Length of Stay via NLP",
-    "section": "",
-    "text": "In this project, we used the MIMIC‑III dataset of medical records, focusing on clinician discharge summaries as the main text source. After cleaning and preprocessing the textual data, we tried three primary text‑processing methods: -BioBERT: A biomedical variant of the BERT language model, pre‑trained on large corpuses of medical literature. -TF‑IDF: A frequency-based representation capturing how important specific words are across all documents in the corpus. -TextBlob: A sentiment analysis approach used experimentally to gauge how sentiment might relate to patient acuity.\nOnce we derived textual embeddings (or sentiment scores) for each patient’s record, we trained several regression models—including Random Forest, Gradient Boosting, Lasso Regression, and Neural Networks—to predict ICU LOS as a continuous outcome. Surprisingly, relatively simple TF‑IDF features fed into a Random Forest model outperformed more advanced embeddings like BioBERT on this task, achieving higher R^2 and lower RMSE. While BioBERT can capture domain‑specific language nuances, the TF‑IDF approach ended up better preserving clinically relevant signals in the discharge summaries. The final model explained roughly half of the variance in ICU LOS using just the text, suggesting that clinician notes carry significant predictive power. In terms of future directions, we looked at incorporating admission notes (instead of discharge summaries) for more real‑time predictions and combining simple at‑home vitals to enhance triage decision‑making.\nFor more details, check out our report:\nDownload Full Report PDF"
-  },
-  {
-    "objectID": "project2.html",
-    "href": "project2.html",
-    "title": "NBA Classification",
-    "section": "",
-    "text": "My group and I used data on NBA games from the 2023–2024 season, with each row containing team performance metrics (e.g., field goal percentage, rebounds, turnovers). After cleaning the data (filling missing values, encoding wins/losses as binary, separating home vs. away games), we generated new features that captured teams’ recent momentum. Specifically, we introduced weighted averages (using exponential decay) for each team’s performance metrics so that more recent games receive higher weight, reflecting current form.\nWe then computed the difference between the home team’s weighted metrics (based on its past home games) and the away team’s weighted metrics (based on its past away games). Models tested included Logistic Regression, Quadratic Discriminant Analysis, Support Vector Machine, and Random Forest. Logistic Regression ultimately provided the highest testing accuracy (about 72%)—a notable improvement over simpler unweighted baselines. Interestingly, incorporating more advanced engineered features, such as detailed head‑to‑head histories or team “stability” measures, did not increase predictive power and often led to overfitting or redundant information. Overall, these results indicate that capturing recent team trends and home‑court advantage was most crucial for predicting game outcomes, while adding too many extra features risked complexity without boosting accuracy.\nFor more details, check out our report:\nDownload Full Report PDF"
-  },
-  {
-    "objectID": "project3.html",
-    "href": "project3.html",
-    "title": "Song Popularity Regression",
-    "section": "",
-    "text": "Using a dataset of Spotify songs—each with attributes such as danceability, energy, loudness, tempo, acousticness, and more—I aimed to see how these musical features relate to a track’s popularity score (on a scale of 0–100). I removed duplicate entries (e.g., the same track re‑released in multiple albums), focused on recent data (December 2019 onward), and created a “top_artist” binary variable indicating whether a song’s artist belonged to the upper decile of average popularity.\nI then employed multiple linear regression, carefully checking assumptions via diagnostic plots (for normality, homoscedasticity, and outliers). After transformations to reduce skew and removing extreme outliers, I used an all‑subsets selection approach guided by the Bayesian Information Criterion. The final model included seven predictors—among them were loudness, energy, duration, top_artist, and genre. Results showed that: - Songs by top artists had substantially higher predicted popularity. - Loudness positively correlated with popularity. - Energy and duration exhibited subtler effects (with more energetic or longer tracks actually showing slightly negative relationships). - Certain genres, particularly rap, also scored higher on popularity compared to others.\nWith an adjusted R^2 around 0.50, the model explained about half of the variation in popularity, highlighting that while audio features matter, factors like artist fame play an outsize role. Future enhancements could include more granular grouping of genres or additional metadata, but this project underscored the interplay between musical traits and artist name recognition in determining a track’s streaming popularity.\nFor more details, check out my report:\nDownload Full Report PDF"
+    "text": "Hello! My name is Carlotta, and I’m a senior at the University of California, Los Angeles (UCLA), graduating in June 2025 with a Bachelor of Science in Statistics and Data Science and a Minor in Bioinformatics (Engineering). Over the past few years, I’ve been fortunate to explore diverse facets of data-driven problem-solving. I interned at Tesla as an Analytics Engineer, where I built and automated an anomaly detection model. I also gained experience at two startups—one as a Data Science Intern, creating a chatbot to streamline RFP submissions for the sales team, and another as a Data Analytics Intern, improving their system for assessing employee engagement.​\nAt UCLA, I’ve been deeply involved in UConsulting, a management consulting organization, both as an undergraduate consultant and as the leader of the Data Science Committee. During my time there, I worked with clients including UNIQLO, streamlined the organization’s recruitment process, and organized multiple initiatives to boost technical proficiency for both our members and the broader UCLA community. Additionally, I’ve served as a research assistant in the Matteo Pellegrini Lab, focusing on computational biology projects.​\n​What draws me to data science is its impactful power: data can drive strategic decisions, help create innovative products and services, solve pressing challenges and more. I find the constant evolution of the field exciting, and I love how every project is like a new puzzle—equally demanding and rewarding. As I look to the future, I’m eager to join a fast-paced, innovative environment which will challenge me, enabling me to grow, while making a meaningful impact as a Data Scientist.\nA fun fact is that I am Italian-American, and I was born and raised in Bologna, Italy until I moved to LA for college. I am fluent in Italian, English, and Spanish. My favorite things to do in my free time include horse back riding, running, reading fantasy romance novels, watching sitcoms, and having creative outlets like paint-by-numbers. Check out some pics below!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBologna, Italy\nOne of my show jumping events!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMy favorite sitcoms\nA Wall-E themed candle I made for a friend"
   }
 ]
