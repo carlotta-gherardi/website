@@ -1,0 +1,23 @@
+---
+title: "About Me"
+---
+
+<img src="downloads/Headshot.png" alt="Headshot" width="200px" style="float:left; margin-right:20px;" />
+
+Hello! My name is Carlotta, and I’m a senior at the University of California, Los Angeles (UCLA), graduating in June 2025 with a Bachelor of Science in Statistics and Data Science and a Minor in Bioinformatics (Engineering). Over the past few years, I’ve been fortunate to explore diverse facets of data-driven problem-solving. I interned at Tesla as an Analytics Engineer, where I built and automated an anomaly detection model. I also gained experience at two startups—one as a Data Science Intern, creating a chatbot to streamline RFP submissions for the sales team, and another as a Data Analytics Intern, improving their system for assessing employee engagement.​
+
+At UCLA, I’ve been deeply involved in UConsulting, a management consulting organization, both as an undergraduate consultant and as the leader of the Data Science Committee. During my time there, I worked with clients including UNIQLO, streamlined the organization’s recruitment process, and organized multiple initiatives to boost technical proficiency for both our members and the broader UCLA community. Additionally, I’ve served as a research assistant in the Matteo Pellegrini Lab, focusing on computational biology projects.​
+
+​What draws me to data science is its impactful power: data can drive strategic decisions, help create innovative products and services, solve pressing challenges and more. I find the constant evolution of the field exciting, and I love how every project is like a new puzzle—equally demanding and rewarding. As I look to the future, I’m eager to join a fast-paced, innovative environment which will challenge me, enabling me to grow, while making a meaningful impact as a Data Scientist.
+
+A fun fact is that I am Italian-American, and I was born and raised in Bologna, Italy until I moved to LA for college. I am fluent in Italian, English, and Spanish. My favorite things to do in my free time include horse back riding, running, reading fantasy romance novels, watching sitcoms, and having creative outlets like paint-by-numbers. Check out some pics below!
+
+---
+
+| ![](downloads/bologna.jpg){width=700} | ![](downloads/36F67DB4-7F97-46E7-A8F4-D3DB5EE62498-1.JPG){width=400} |
+|:-------------------------------------:|:--------------------------------------------------------------------:|
+| **Bologna, Italy**                    | **One of my show jumping events!**                                   |
+
+| ![](downloads/Screenshot 2025-03-14 at 12.01.02 AM.png){width=400} | ![](downloads/IMG_0577.jpg){width=250}              |
+|:------------------------------------------------------------------:|:---------------------------------------------------:|
+| **My favorite sitcoms**                                            | **A Wall-E themed candle I made for a friend**      |

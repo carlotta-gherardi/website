@@ -1,0 +1,8 @@
+---
+title: "Contact"
+---
+
+- **Phone:** 424-535-8137  
+- **Email:** [cgherardi@g.ucla.edu](mailto:cgherardi@g.ucla.edu)
+- **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/carlotta-gherardi/){target="_blank"}
+- **GitHub:** [GitHub Profile](https://github.com/carlotta-gherardi){target="_blank"}

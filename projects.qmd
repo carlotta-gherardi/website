@@ -1,0 +1,25 @@
+---
+title: "Projects"
+---
+
+## ICU Length of Stay via NLP
+[**Click here to learn more!**](project1.qmd){.btn}
+  
+A group project where we developed a model to predict the length of stay (LOS) in the Intensive Care Unit (ICU) by applying natural language processing (NLP) to clinical caregiver notes. Using data from the MIMIC-III database, we explored multiple text-processing methods—such as BioBERT and TF‑IDF—and trained various machine learning models to forecast a patient’s ICU LOS. Ultimately, TF‑IDF‑based approaches in tree-based models performed best in explaining ICU stay duration from discharge summaries. 
+![](downloads/doctor.png){width=400}
+
+---
+
+## NBA Classification
+[**Click here to learn more!**](project2.qmd){.btn}
+
+For this group project, we built classifiers to predict NBA game outcomes (win or loss) using team‑level data from the 2023–2024 season. By engineering features such as weighted averages of recent performance and a home‑court indicator, we trained models like Logistic Regression, SVM, and Random Forest to achieve up to 72% accuracy. Additional complex features (like head‑to‑head history) did not yield further gains, underscoring the importance of relatively simple but well‑chosen variables.  
+![](downloads/basketball.png){width=400}
+
+---
+
+## Song Popularity Regression
+[**Click here to learn more!**](project3.qmd){.btn}
+
+I analyzed Spotify data to determine which musical characteristics best predict a song’s popularity. By building a multiple linear regression model on features like energy, loudness, duration, top‑artist status, and genre, I captured about half of the variance in track popularity. Notably, being a top artist and having a relatively loud track were among the most influential factors in boosting popularity scores.
+![](downloads/spotify.png){width=400}

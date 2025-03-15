@@ -1,0 +1,11 @@
+---
+title: "NBA Classification"
+---
+
+My group and I used data on NBA games from the 2023–2024 season, with each row containing team performance metrics (e.g., field goal percentage, rebounds, turnovers). After cleaning the data (filling missing values, encoding wins/losses as binary, separating home vs. away games), we generated new features that captured teams’ recent momentum. Specifically, we introduced weighted averages (using exponential decay) for each team’s performance metrics so that more recent games receive higher weight, reflecting current form.
+
+We then computed the difference between the home team’s weighted metrics (based on its past home games) and the away team’s weighted metrics (based on its past away games). Models tested included Logistic Regression, Quadratic Discriminant Analysis, Support Vector Machine, and Random Forest. Logistic Regression ultimately provided the highest testing accuracy (about 72%)—a notable improvement over simpler unweighted baselines. Interestingly, incorporating more advanced engineered features, such as detailed head‑to‑head histories or team “stability” measures, did not increase predictive power and often led to overfitting or redundant information. Overall, these results indicate that capturing recent team trends and home‑court advantage was most crucial for predicting game outcomes, while adding too many extra features risked complexity without boosting accuracy.
+
+For more details, check out our report:
+
+[Download Full Report PDF](downloads/Stats101C_Final_Project.pdf){.btn .btn-success target="_blank"}
